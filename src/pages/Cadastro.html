@@ -4,46 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
+    <link rel="stylesheet" href="./css/styleCadastro.css">
     <title>Cadastrar</title>
 </head>
-<body class="">
+<body>
     <header>
-        
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="../../index.html" class="navbar-brand"><span class="iconSize icon-angle-double-left text-white m-3"></span></a>
+            </div>
+        </nav>
     </header>
     <main>
-        <div class="row d-flex justify-content-center">
-            <img src="../../assets/img/img.Senac logo 3 (1).png" alt="" class="w-50">
-        </div>
-        <div class="row-cols-lg-2">
-            <div class="col">
-                <div class="row">
-                    <label for="Inputnome" class="form-label">Nome</label>
-                    <input type="nome" class="form-control" id="InputSobrenome">
+        <form class="container-fluid background p-5">
+            <div class="row d-flex justify-content-center py-5">
+                <img src="../../assets/img/img.Senac logo 3 (1).png" alt="" class="w-auto h-auto">
+            </div>
+            <div class="row row-cols-lg-2">
+                <div class="col-lg">
+                    <input type="text" class="form-control my-3" id="InputSobrenome" placeholder="Nome ">
                 </div>
-                <div class="row">
-                    <label for="InputSobrenome" class="form-label">Sobrenome</label>
-                    <input type="Sobrenome" class="form-control" id="InputNome">
+                <div class="col-lg">
+                    <input type="text" class="form-control my-3" id="InputNome" placeholder="Sobrenome">
                 </div>
-                <div class="row">
-                    <label for="InputEmail" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="InputEmail">
+                <div class="col-lg">
+                    <input type="email" class="form-control my-3" id="InputEmail" placeholder="E-mail">
                 </div>
-                <div class="row">
-                    <label for="InputSenha" class="form-label">Senha</label>
-                    <input type="Senha" class="form-control" id="InputSenha">
+                <div class="col-lg">
+                    <input type="password" class="form-control my-3" id="InputSenha"  placeholder="Senha">
                 </div>
-                <div class="row">
-                    <input type="nome" class="form-control" id="InputEmail" placeholder="Rua">
+                <label for="validationServer04" class="form-label w-100 mb-">Endereço:</label>
+                <div class="col-lg">
+                    <select class="form-select my-3" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                        <option selected disabled value="">Estado</option>
+                        <option>Paraná</option>
+                        <option>Rio Grande do Sul</option>
+                        <option>Santa Catarina</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
                 </div>
-                <div class="row">
-                    <input type="nome" class="form-control" id="InputEmail" placeholder="Número ou complemento">
+                <div class="col-lg">
+                    <select class="form-select my-3" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                        <option selected disabled value="">Cidade</option>
+                        <option>Matinhos</option>
+                        <option>Guaratuba</option>
+                        <option>Paranaguá</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <input type="nome" class="form-control my-3" id="InputEmail" placeholder="Rua">
+                </div>
+                <div class="col-lg">
+                    <input type="nome" class="form-control my-3" id="InputEmail" placeholder="Número ou complemento">
                 </div>
             </div>
-            <div class="col">
+            <div class="text-center">
+                <button  class="btn btn-write bg-white mt-5">Cadastrar</button>
             </div>
-        </div>
+        </form>
     </main>
-    <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,13 @@
-.container{
-    background: -webkit-linear-gradient(90deg, rgba(13,202,240,1) 0%, rgba(2,198,210,1) 100%);
+
+.bodyLogin{
+    width: 100vw;
+    height: 100vh;
+} 
+
+.LoginBG{
+    height: 100vh;
+    background: -webkit-linear-gradient(90deg, rgb(176, 191, 194) 0%, rgb(78, 131, 175) 100%);
+}
+.iconSize{
+    font-size: 4rem;
 }
