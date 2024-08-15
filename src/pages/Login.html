@@ -36,7 +36,30 @@
                             <a class="nav-link borTop text-warning" aria-current="page" href="./Cadastro.html">Cadastrar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link borTop text-warning" aria-current="page" href="">Esqueci minha senha</a>
+                            <!-- Button trigger modal -->
+                            <a type="button" class="text-decoration-none text-warning my-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Esqueci minha senha
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Recuperar Senha</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Enviamos um código para o e-mail <a href="">placeholder@gmail.com</a> <br>
+                                            Por favor, verifique se este é seu e-mail e insira o código recebido abaixo</p>
+                                            <input type="number" placeholder="insira o código aqui">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary">Verificar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                     <div class="col d-flex flex-column">
