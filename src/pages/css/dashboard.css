@@ -1,6 +1,21 @@
-.headerLogin{
-    background: -webkit-linear-gradient(90deg, rgb(197, 105, 0) 0%, rgb(238, 143, 0) 100%);
+.grad{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
 }
 .pfp{
     font-size: 2.3rem;
+}
+.imgLogo{
+    width: 25rem;
+}
+.azulBB{
+    background-color: #B8CDE1;
+}
+.azulBA{
+    background-color: #7591AA;
+}
+.colorBG{
+    background-color: #93B4D2;
+}
+@media only screen and (max-width: 990px) {
+    
 }

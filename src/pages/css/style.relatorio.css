@@ -1,0 +1,9 @@
+.grad{
+    background: -webkit-linear-gradient(90deg, rgb(96, 147, 224) 0%, rgb(86, 113, 235) 100%);
+}
+.quadrado{
+    background-color: #A7A0A0;
+}
+.iconSize{
+    font-size: 4rem;
+}
