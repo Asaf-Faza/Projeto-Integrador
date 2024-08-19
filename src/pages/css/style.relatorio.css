@@ -3,7 +3,18 @@
 }
 .quadrado{
     background-color: #A7A0A0;
+    width: 30rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
 }
 .iconSize{
     font-size: 4rem;
+}
+.separation{
+    height: 6rem;
 }

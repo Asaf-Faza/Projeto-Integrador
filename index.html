@@ -13,151 +13,247 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary grad">
             <div class="container-fluid">
                 <div class="mx-2">
-                    <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Cadastro.html">Cadastrar</a>
+                    <a class="fs-4 text-decoration-none text-dark ms-5" href="./src/pages/Cadastro.html">Cadastrar</a>
                 </div>
                 <div class="d-flex align-items-center">
                     <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Login.html">Fazer Login</a>
-                    <button class="border-0 bg-transparent pfp"><span class="icon-user-circle-o"></span></button>
+                    <button class="border-0 bg-transparent pfp me-3"><span class="icon-user-circle-o"></span></button>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col d-flex justify-content-center my-3">
-                    <img src="./assets/img/imgLogo.png" alt="" class="imgLogo">
+            <div class="row row-cols-lg-2 mt-lg-5">
+                <div class="p-0 d-flex flex-column">
+                    <div class="col-lg d-flex align-items-center justify-content-around text-center my-3 flex-column">
+                        <img src="./assets/img/imgLogo.png" alt="" class="imgLogo mb-lg-5">
+                        <div class="row appear">
+                            <div class="row">
+                                <h4 class="fw-bolder display-4">Bem-vindo ao sistema ERP SENAC!</h4>
+                            </div>
+                            <div class="flex-row d-flex justify-content-center my-4 align-items-center">
+                                <a href="./src/pages/Cadastro.html" class="text-decoration-none azulBB border-0 rounded p-3 py-3 h3 shadow">Comece agora!</a>
+                                <h2 class="mx-5 display-5 fw-bolder">ou</h2>
+                            </div>
+                            <div class="row mb-5">
+                                <h4 class="display-5 fw-bolder">Confira abaixo tudo o que temos a oferecer!</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid azulBA py-3 col-lg appear">
+                        <div class="row text-center">
+                            <h3 class="text-white">Veja alguns comentários sobre nosso ERP:</h3>
+                        </div>
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner py-5">
+                                <div class="carousel-item active">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user1.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Astolfo Lobo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user3.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Gru Nariz</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user2.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Al Guma Müller</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“BOOM SHBOOM! KABOOM PLOW BUUUMM... BOOM BOOM BOOM BOOM, POW BUUUMM.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user4.png" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Boy Kisser</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <h5 class="text-white text-center">Recebemos vários comentários e o seu pode ser o próximo!</h5>
+                        </div>
+                        <div class="row d-flex justify-content-center my-3">
+                            <a href="./src/pages/Cadastro.html" class="text-decoration-none text-black fw-semibold bg-white rounded-5 w-50 text-center p-2 shadow">Comece agora!</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="container grad rounded-top-5 py-5 text-center mainCol">
-                    <div class="row">
-                        <h4>Bem-vindo ao sistema ERP SENAC!</h4>
-                    </div>
-                    <div class="flex-row d-flex justify-content-center my-4 align-items-center">
-                        <button class="mx- azulBB border-0 rounded p-3 py-3 h3 shadow">Comece agora!</button>
-                        <h2 class="mx-5">ou</h2>
-                    </div>
-                    <div class="row mb-5">
-                        <h4>Confira abaixo tudo o que temos a oferecer!</h4>
-                    </div>
-                    <div class="col">
-                        <div class="d-lg-flex m-4">
-                            <img src="./assets/img/seguranca.png" alt="" class="w-50 h-50">
-                            <div class="col">
-                                <h3 class="my-1">Segurança de dados</h3>
-                                <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
+                <div class="p-0">
+                    <div class="col-lg container grad rounded-top-5 py-5 text-center mainCol d-flex flex-column align-items-center">
+                        <div class="row d-lg-none">
+                        <div class="row">
+                            <h4>Bem-vindo ao sistema ERP SENAC!</h4>
+                        </div>
+                        <div class="flex-row d-flex justify-content-center my-4 align-items-center">
+                            <a href="./src/pages/Cadastro.html" class="text-decoration-none azulBB border-0 rounded p-3 py-3 h3 shadow">Comece agora!</a>
+                            <h2 class="mx-5">ou</h2>
+                        </div>
+                        <div class="row mb-5">
+                            <h4>Confira abaixo tudo o que temos a oferecer!</h4>
+                        </div>
+                        </div>
+                        <div class="col w-75">
+                            <div class="d-lg-flex m-4">
+                                <img src="./assets/img/seguranca.png" alt="" class="imgIndex">
+                                <div class="col">
+                                    <h3 class="my-1">Segurança de dados</h3>
+                                    <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
+                                </div>
+                            </div>
+                            <div class="d-lg-flex m-4">
+                                <img src="./assets/img/gestao.png" alt="" class="imgIndex">
+                                <div class="col">
+                                    <h3 class="my-1">Gestão financeira</h3>
+                                    <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
+                                </div>
+                            </div>
+                            <div class="d-lg-flex m-4">
+                                <img src="./assets/img/gestaoEs.png" alt="" class="imgIndex">
+                                <div class="col">
+                                    <h3 class="my-1">Gestão de estoque</h3>
+                                    <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="d-lg-flex m-4">
-                            <img src="./assets/img/gestao.png" alt="" class="w-50 h-50">
-                            <div class="col">
-                                <h3 class="my-1">Gestão financeira</h3>
-                                <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
-                            </div>
-                        </div>
-                        <div class="d-lg-flex m-4">
-                            <img src="./assets/img/gestaoEs.png" alt="" class="w-50 h-50">
-                            <div class="col">
-                                <h3 class="my-1">Gestão de estoque</h3>
-                                <p class="m-2 px-sm-2 text-center fw-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates quod ipsum neque, repellat necessitatibus unde. Perspiciatis dolorem aut laudantium, voluptatum earum autem recusandae, aliquid officiis quisquam rerum velit sequi necessitatibus.</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="container-fluid azulBA py-3">
-                    <div class="row text-center">
-                        <h3 class="text-white">Veja alguns comentários sobre nosso ERP:</h3>
-                    </div>
-                    <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <div class="container-fluid azulBA py-3 col-lg disappear">
+                        <div class="row text-center">
+                            <h3 class="text-white">Veja alguns comentários sobre nosso ERP:</h3>
                         </div>
-                        <div class="carousel-inner py-5">
-                            <div class="carousel-item active">
-                                <div class="w-100 d-flex justify-content-center">
-                                    <div class="card d-flex w-75 h-25 p-3 shadow">
-                                        <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img src="./assets/img/user1.jpg" alt="" class="pfpCom rounded-5">
-                                            <div class="mx-3">Astolfo Lobo</div>
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            </div>
+                            <div class="carousel-inner py-5">
+                                <div class="carousel-item active">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user1.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Astolfo Lobo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user3.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Gru Nariz</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user2.jpg" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Al Guma Müller</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="w-100 d-flex justify-content-center">
+                                        <div class="card d-flex w-75 h-25 p-3 shadow">
+                                            <P class="fw-semibold">“BOOM SHBOOM! KABOOM PLOW BUUUMM... BOOM BOOM BOOM BOOM, POW BUUUMM.”</P>
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img src="./assets/img/user4.png" alt="" class="pfpCom rounded-5">
+                                                <div class="mx-3">Boy Kisser</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="w-100 d-flex justify-content-center">
-                                    <div class="card d-flex w-75 h-25 p-3 shadow">
-                                        <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img src="./assets/img/user3.jpg" alt="" class="pfpCom rounded-5">
-                                            <div class="mx-3">Gru Nariz</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <h5 class="text-white text-center">Recebemos vários comentários e o seu pode ser o próximo!</h5>
+                        </div>
+                        <div class="row d-flex justify-content-center my-3">
+                            <a href="./src/pages/Cadastro.html" class="text-decoration-none text-black fw-semibold bg-white rounded-5 w-50 text-center p-2 shadow">Comece agora!</a>
+                        </div>
+                    </div>
+                    <div class="footer container-fluid gray col-lg">
+                        <div class="row text-center">
+                            <h2 class="my-4">Entre em contato com a gente!</h2>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col w-50">
+                            <p class="fw-bold footerPs my-3">
+                                <span class="icon-phone fw-bold"></span> (41) 1234-5678
+                            </p>
+                            <p class="fw-bold footerPs my-3">
+                                <span class="icon-at-sign fw-bold"></span> senacemail@email.com
+                            </p>
+                            <p class="fw-bold footerPs my-3">
+                                <span class="icon-whatsapp fw-bold"></span> (41) 98765-4321
+                            </p>
                             </div>
-                            <div class="carousel-item">
-                                <div class="w-100 d-flex justify-content-center">
-                                    <div class="card d-flex w-75 h-25 p-3 shadow">
-                                        <P class="fw-semibold">“Adorei esse ERP, o método de aceitar e vetar compras é muito bom. Acabou com várias discussões em nossa empresa.”</P>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img src="./assets/img/user2.jpg" alt="" class="pfpCom rounded-5">
-                                            <div class="mx-3">Al Guma Müller</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="w-100 d-flex justify-content-center">
-                                    <div class="card d-flex w-75 h-25 p-3 shadow">
-                                        <P class="fw-semibold">“BOOM SHBOOM! KABOOM PLOW BUUUMM... BOOM BOOM BOOM BOOM, POW BUUUMM.”</P>
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img src="./assets/img/user4.png" alt="" class="pfpCom rounded-5">
-                                            <div class="mx-3">Boy Kisser</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col d-flex flex-column align-items-center">
+                                <img src="./assets/img/imgLogo.png" alt="" class="w-50 mb-3">
+                                <p class="fw-bold footerPs text-center"><span class="icon-copyright fw-bold "></span>2024, Todos os direitos reservados</p>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                    <div class="row">
-                        <h5 class="text-white text-center">Recebemos vários comentários e o seu pode ser o próximo!</h5>
-                    </div>
-                    <div class="row d-flex justify-content-center my-3">
-                        <a href="" class="text-decoration-none text-black fw-semibold bg-white rounded-5 w-50 text-center p-2 shadow">Comece agora!</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="container-fluid gray">
-            <div class="row text-center">
-                <h2>Entre em contato com a gente!</h2>
-            </div>
-            <div class="row row-cols-2">
-                <div class="col">
-                <p>
-                    <span class="icon-phone">(41) 1234-5678</span>
-                </p>
-                <p>
-                    <span class="icon-at-sign">senacemail@placeholder.com</span>
-                </p>
-                </div>
-                <div class="col">
-                    <img src="./assets/img/imgLogo.png" alt="" class="w-50">
-                </div>
-            </div>
-        </div>
+        
     </footer>
     <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
