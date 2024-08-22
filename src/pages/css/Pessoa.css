@@ -1,0 +1,6 @@
+.grad{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
+}
+.iconSize{
+    font-size: 4rem;
+}

@@ -8,6 +8,13 @@
     display: flex;
     justify-content: center;
 }
+.btmFiltro{
+    background-color: #A7A0A0;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
 .container{
     display: flex;
     justify-content: center;

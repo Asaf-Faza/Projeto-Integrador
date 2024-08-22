@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary grad">
             <div class="container-fluid">
-                <div class="">
+                <div class="d-flex justify-content-between w-100">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon "></span>
                     </button>
@@ -24,7 +24,7 @@
                                 Cadastro
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Seção cadastral</a></li>
+                                    <li><a class="dropdown-item" href="./SecCad.html">Seção cadastral</a></li>
                                     <li><a class="dropdown-item" href="#">Lista de Pessoal</a></li>
                                 </ul>
                             </li>
@@ -33,7 +33,7 @@
                                 Suprimentos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Relatório de Compras</a></li>
+                                    <li><a class="dropdown-item" href="./RelCom.html">Relatório de Compras</a></li>
                                     <li><a class="dropdown-item" href="#">Pedido de Compras</a></li>
                                     <li><a class="dropdown-item" href="#">Gerenciamento de Estoque
                                     </a></li>
@@ -41,10 +41,12 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Login.html">Usuário123</a>
-                    <button class="border-0 bg-transparent pfp"><span class="icon-user-circle-o"></span></button>
+                    <ul class="navbar-nav">
+                        <li class=" d-flex align-items-center">
+                            <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Login.html">Usuário123</a>
+                            <a class="btn border-0 bg-transparent" role="button" href="./Pessoa.html"><span class="icon-user-circle-o pfp"></span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -88,13 +90,13 @@
                 </p>
                 </div>
                 <div class="col d-flex flex-column align-items-center">
-                    <img src="./assets/img/imgLogo.png" alt="" class="w-50 mb-3">
+                    <img src="../../assets/img/imgLogo.png" alt="" class="w-50 mb-3">
                     <p class="fw-bold footerPs text-center"><span class="icon-copyright fw-bold "></span>2024, Todos os direitos reservados</p>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

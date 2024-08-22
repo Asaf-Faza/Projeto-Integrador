@@ -12,7 +12,10 @@
     background-color: #B8CDE1;
 }
 .azulBA{
-    background-color: #7591AA;
+    background-color: #154a79;
+}
+.azulBC{
+    background-color: #154a79;
 }
 .pfpCom{
     width: 2.5rem;
@@ -34,6 +37,9 @@
 .disappear{
     display: none;
 }
+.indexBg{
+    background-image: url(../img/backgroundDeco.png);
+}
 @media only screen and (max-width: 990px) {
     .mainCol{
         width: 90vw;
@@ -42,8 +48,8 @@
         display: none;
     }
     .imgIndex{
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
     }
     .imgLogo{
         width: 17rem;
@@ -54,5 +60,8 @@
     }
     .disappear{
         display: block;
+    }
+    .indexBg{
+        background: none;
     }
 }
