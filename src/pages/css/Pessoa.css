@@ -4,3 +4,11 @@
 .iconSize{
     font-size: 4rem;
 }
+.sep{
+    height: 6rem;
+}
+.corBtm{
+    background-color: rgb(102, 102, 102);
+    height: 2rem;
+    width: 11rem;
+}

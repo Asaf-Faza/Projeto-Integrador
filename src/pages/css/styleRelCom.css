@@ -2,16 +2,16 @@
     background: -webkit-linear-gradient(90deg, rgb(96, 147, 224) 0%, rgb(86, 113, 235) 100%);
 }
 .quadrado{
-    background-color: #A7A0A0;
-    width: 30rem;
-    height: 10rem;
-    display: flex;
+    background-color: #9c9393;
+    width: 20rem;
+    height: 8rem;
+    display: flex ;
     justify-content: center;
 }
 .btmFiltro{
-    background-color: #A7A0A0;
-    width: 10rem;
-    height: 10rem;
+    background-color: #a89b9b;
+    width: 60rem;
+    height: 05rem;
     display: flex;
     justify-content: center;
 }

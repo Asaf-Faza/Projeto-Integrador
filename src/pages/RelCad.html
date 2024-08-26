@@ -3,11 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styleRelCad.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="quadrado rounded-3 my-1">
-        <h3>Compra aprovada  11/03/2024 <br>Caixa de canetas 11:33 </h3>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 m-0 border-bottom border-1v shadow ">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="offcanvasRight" tabindex="-1"
+                aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center ">
+                    <li class="nav-item dropdown px-4 px-lg-0">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Cadastro
+                        </a>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item " href="cadatroCF.html"> Cadastro de Clientes e
+                                    Fornecedores</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Cadastro de Produtos</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="cadastroV.html">Cadastro de
+                                    Vendedores</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-4 px-lg-0">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Suprimentos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Controle de
+                                    Etoque</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Pedidos de Compra</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-lg-5 text-center mx-lg-0 px-lg-0">
+                <div class="col h-100 mt-4 mx-lg-0">
+                    <button type="button" class="btn btn-primary rounded-0 w-100" data-bs-toggle="modal"
+                        data-bs-target="#modalCliente">
+                        <i class="bi bi-person-circle iconFont me-2"></i>Adicionar vendedor
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalCliente" tabindex="-1" aria-labelledby="modalClienteLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title text-warning fs-5" id="modalClienteLabel">Vendedores</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card">
+                                        <i class="bi bi-person-badge iconFontCard"></i>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputName" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputData" class="form-label">Data de Nascimento</label>
+                                                    <input type="date" class="form-control" id="date">
+                                                </div>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputCPF" class="form-label">CPF</label>
+                                                    <input type="number" class="form-control" id="cpf">
+                                                </div>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputCelular" class="form-label">Celular</label>
+                                                    <input type="number" class="form-control" id="cellphone">
+                                                </div>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputEmpresa" class="form-label"> Cargo</label>
+                                                    <input type="number" class="form-control" id="work">
+                                                </div>
+                                                <div class="mb-3 text-start">
+                                                    <label for="InputEmail" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="mt-5">
+            <div class="container">
+                <h3 class="text-primary fw-bold">Vendedores</h3>
+                <table id="vendedores" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Data de Nascimento</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Cargo</th>
+                            <th>E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mario Eduardo</td>
+                            <td>1999-10-21</td>
+                            <td>113.123.308-33</td>
+                            <td>(320)34234327</td>
+                            <td>Chef de Finanças (CFO)</td>
+                            <td>marioeduardo@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Carla Azufa</td>
+                            <td>2000-03-12</td>
+                            <td>345.234.342-11</td>
+                            <td>(345)45345345</td>
+                            <td>Engenheiro de Software</td>
+                            <td>CarlaAzufa@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Emirlo Cassiano</td>
+                            <td>2001-06-23</td>
+                            <td>342.543.543-44</td>
+                            <td>(432)34234324</td>
+                            <td>Sistema Administrativo</td>
+                            <td>EmirloCassiano@gmail.com</td>
+                        </tr>             
+                            <tr>
+                            <td>Kauana Alexandra</td>
+                            <td>1999-05-21</td>
+                            <td>876.987.657-99</td>
+                            <td>(829)43247667</td>
+                            <td>Suporte ao Consumidor</td>
+                            <td>KuanaAlexandra@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
