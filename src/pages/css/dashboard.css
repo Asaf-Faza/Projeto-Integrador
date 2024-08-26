@@ -26,6 +26,9 @@
 .rounding{
     border-radius: 10rem 0rem 0rem 0rem;
 }
+.decoBG{
+    background-image: url(../../../assets/img/backgroundDeco.png);
+}
 .appear{
     display: flex;
 }
@@ -45,5 +48,8 @@
     }
     .disappear{
         display: block;
+    }
+    .decoBG{
+        background-image: none;
     }
 }

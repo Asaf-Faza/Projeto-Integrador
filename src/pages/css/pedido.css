@@ -1,0 +1,43 @@
+.grad{
+    background: -webkit-linear-gradient(90deg, rgb(230, 173, 108) 0%, rgb(189, 131, 85) 100%);
+}
+.quadrado{
+    background-color: #807d7db6;
+    width: auto;
+    height: 8rem;
+    display: flex ;
+    justify-content: center;
+}
+.btmFiltro{
+    background-color: #6e6961b0;
+    width: 60rem;
+    height: 05rem;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.iconSize{
+    font-size: 4rem;
+}
+.separation{
+    height: 6rem;
+}
+.quadrinho{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    width: 50rem;
+}
+.btnAV{
+    background-color: #6e6961b0;
+    height: 5rem;
+    width: 15rem;
+}
+.btninho{
+    background-color: #ffffffb0;
+    height: 4rem;
+    width: 4rem;
+}

@@ -1,15 +1,15 @@
 .grad{
-    background: -webkit-linear-gradient(90deg, rgb(96, 147, 224) 0%, rgb(86, 113, 235) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(96, 147, 224) 0%, rgb(118, 132, 194) 100%);
 }
 .quadrado{
-    background-color: #9c9393;
-    width: 20rem;
+    background-color: #868585b6;
+    width: auto;
     height: 8rem;
     display: flex ;
     justify-content: center;
 }
 .btmFiltro{
-    background-color: #a89b9b;
+    background-color: #33302da6;
     width: 60rem;
     height: 05rem;
     display: flex;
