@@ -54,3 +54,13 @@ new DataTable('#fluxo', {
         info:           "Mostrando _START_ a _END_ de _TOTAL_ entradas",
     }
 });
+new DataTable('#dashboard', {
+    colReorder: true,
+    responsive: true,
+    scrollY: '200px',
+    language:{
+        search:         "Buscar:",
+        lengthMenu:     "_MENU_ elementos por página",
+        info:           "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+    }
+});

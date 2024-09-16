@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
+    <link rel="stylesheet" href="../../assets/CSS/datatables.min.css">
     <title>Dashboard</title>
 </head>
     
@@ -97,19 +98,119 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg p-0">
-                    <div class="container colorBG rounding py-5 text-center mt-lg-5">
-                        <div class="row d-lg-none mt-3">
-                            <h4>Bem-vindo a DASHBOARD!</h4>
+                <div class="col-lg p-lg-0 d-flex flex-column justify-content-end">
+                    <div class="container-fluid colorBG rounding py-5 text-center mt-lg-5">
+                        <div class="row d-lg-none my-3">
+                            <h4 class="mb-3">Bem-vindo à DASHBOARD!</h4>
+                        </div>
+                        <h4 class=" my-5">Confira seus cadastros de hoje:</h4>
+                        <table id="dashboard" class="table table-striped colorBG rounded">
+                            <thead>
+                                <tr >
+                                    <th>Nome:</th>
+                                    <th>Tipo:</th>
+                                    <th>Região</th>
+                                    <th>Horário</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                                <tr>
+                                    <td>Astolfo</td>
+                                    <td>Cliente</td>
+                                    <td>Matinhos, PR</td>
+                                    <td>03:24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="justify-content-center my-5">
+                            <h4 class="my-5">Reestoques de hoje:</h4>
+                            <table id="dashboard" class="table table-striped colorBG rounded">
+                                <thead>
+                                    <tr>
+                                        <th>Produto:</th>
+                                        <th>Preço:</th>
+                                        <th>Unidades adquiridas:</th>
+                                        <th>Horário:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pão Premium</td>
+                                        <td>R$200</td>
+                                        <td>3</td>
+                                        <td>03:24</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="justify-content-center my-5">
-                            <img src="../../assets/img/imgDashboard1.png" alt="" class="w-50">
-                        </div>
-                        <div class="justify-content-center my-5">
-                            <img src="../../assets/img/imgDashboard2.png" alt="" class="w-75">
-                        </div>
-                        <div class="justify-content-center my-5">
-                            <img src="../../assets/img/imgDashbosrd3.png" alt="" class="w-75">
+                            
                         </div>
                     </div>
                     <div class="footer container-fluid gray col-lg disappear">
@@ -143,6 +244,7 @@
     </footer>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../src/js/datatables.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
 </html>
