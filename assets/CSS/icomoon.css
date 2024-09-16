@@ -85,6 +85,7 @@
 }
 .icon-angle-double-left:before {
   content: "\e912";
+  color: black;
 }
 .icon-profile:before {
   content: "\e923";

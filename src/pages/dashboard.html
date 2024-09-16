@@ -11,7 +11,7 @@
     
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary grad">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <div class="d-flex justify-content-between w-100">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,26 +22,27 @@
                             <img src="../../assets/img/imgLogo.png" alt="" class="w-50 h-auto ms-5">
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body">
-                            <div class="dropdown mt-3">
-                                <a class="dropdown-toggle text-decoration-none text-black ms-3" type="button" data-bs-toggle="dropdown">
+                        <div class="offcanvas-body  d-lg-flex align-items-lg-center">
+                            <a href="./dashboard.html" class="my-3 my-lg-0 ms-3 fs-3 text-decoration-none text-black"><img src="../../assets/img/home icon.png" alt="" class="homeIcon"></a>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
                                     Cadastro
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Cadastro de clientes e fornecedores</a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastro de produtos</a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastro de vendedores</a></li>
-                                    <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadCliFor.html">Cadastro de clientes e fornecedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./ProCad.html">Cadastro de produtos</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadVen.html">Cadastro de vendedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCad.html">Relatórios</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown mt-3">
-                                <a class="dropdown-toggle text-decoration-none text-black ms-3" type="button" data-bs-toggle="dropdown">
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
                                     Suprimentos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Controle de estoque</a></li>
-                                    <li><a class="dropdown-item" href="#">Pedidos de compra</a></li>
-                                    <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./estCtr.html">Controle de estoque</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadPdd.html">Pedidos de compra</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCom.html">Relatórios</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -57,20 +58,19 @@
         </nav>
     </header>
     <main>
+        <div class="separation">
+        </div>
         <div class="container-fluid">
             <div class="row row-cols-lg-2">
                 <div class="col-lg flex-column d-flex align-items-center mt-3 p-0 decoBG">
                     <img src="../../assets/img/imgLogo.png" alt="" class="imgLogo my-5">
-                    <div class="appear flex-column justify-content-around h-100">
-                        <div class="row d-flex justify-content-center text-center">
+                    <div class="appear flex-column justify-content-around align-items-center h-100">
+                        <div class="row d-flex flex-column justify-content-around text-center">
                             <div class="row">
-                                <h4 class="display-3 fw-bolder">Bem-vindo ao sistema ERP SENAC!</h4>
-                            </div>
-                            <div class="flex-row d-flex justify-content-center my-4 align-items-center">
-                                <a href="./Cadastro.html" class="text-decoration-none azulBC border-0 rounded p-3 h3 shadow display-6 fw-bold">Configure sua Dashboard </a>
+                                <h2 class="display-5 fw-bolder my-5">Bem-vindo ao sistema ERP SENAC!</h2>
                             </div>
                             <div class="row mb-5">
-                                <h4 class="fw-bolder display-3">Confira abaixo tudo o que temos a oferecer!</h4>
+                                <h2 class="fw-bolder display-5 my-5">Sua dashboard se encontra ao lado.</h2>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-lg p-0">
                     <div class="container colorBG rounding py-5 text-center mt-lg-5">
-                        <div class="row d-lg-none">
+                        <div class="row d-lg-none mt-3">
                             <h4>Bem-vindo a DASHBOARD!</h4>
                         </div>
                         <div class="justify-content-center my-5">
@@ -143,5 +143,6 @@
     </footer>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

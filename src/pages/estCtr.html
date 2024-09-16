@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estCtr.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
+    <link rel="stylesheet" href="../../assets/CSS/datatables.min.css">
+    <title>Controle de Estoque</title>
+</head>
+<body class="flex-column d-flex justify-content-between">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <img src="../../assets/img/imgLogo.png" alt="" class="w-50 h-auto ms-5">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body  d-lg-flex align-items-lg-center">
+                            <a href="./dashboard.html" class="my-3 my-lg-0 ms-3 fs-3 text-decoration-none text-black"><img src="../../assets/img/home icon.png" alt="" class="homeIcon"></a>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
+                                    Cadastro
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item fs-4" href="./CadCliFor.html">Cadastro de clientes e fornecedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./ProCad.html">Cadastro de produtos</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadVen.html">Cadastro de vendedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCad.html">Relatórios</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
+                                    Suprimentos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item fs-4" href="./estCtr.html">Controle de estoque</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadPdd.html">Pedidos de compra</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCom.html">Relatórios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class=" d-flex align-items-center">
+                            <a class="fs-4 text-decoration-none text-dark" href="./Login.html">Usuário123</a>
+                            <a class="btn border-0 bg-transparent" role="button" href="./Pessoa.html"><span class="icon-user-circle-o pfp"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="separation"></div>
+        <div class="container-fluid px-lg-5">
+            <h1>Controle de Estoque</h1>
+            <div class="col-lg mt-3">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-3 fw-bold my-3 grad rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Produtos
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show">
+                            <div class="table-responsive">
+                                <table id="produtos" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Produto</th>
+                                            <th>Preço</th>
+                                            <th>Em Estoque</th>
+                                            <th>Em Estoque Físico</th>
+                                            <th>E-mail do fornecedor</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monitor</td>
+                                            <td>800,00R$</td>
+                                            <td>200</td>
+                                            <td>68</td>
+                                            <td>sanpaula@gmail.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer container-fluid grayGrad">
+            <div class="row row-cols-lg-2 py-2">
+                <div class="col-lg d-flex flex-column justify-content-around align-items-center">
+                    <img src="../../assets/img/imgLogo.png" alt="" class="w-25 m-3">
+                    <p class=" fw-semibold">&copy;2024, todos os direitos reservados</p>
+                </div>
+                <div class="col-lg d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-at-sign"></span><a href="" class="text-decoration-none text-black fw-semibold">senacemail@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-phone"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 1234-5678</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-whatsapp"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 98765-4321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../src/js/datatables.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

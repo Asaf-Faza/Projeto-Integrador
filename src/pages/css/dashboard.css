@@ -1,12 +1,19 @@
 .grad{
     background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
 }
+.navbar.scrolled{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
+}
 .pfp{
     font-size: 2.3rem;
 }
 .imgLogo{
     width: 32rem;
     height: 19rem;
+}
+.homeIcon{
+    width: 2rem;
+    height: 2rem;
 }
 .azulBC{
     background-color: #B8CDE1;
@@ -34,6 +41,9 @@
 }
 .disappear{
     display: none;
+}
+.separation{
+    height: 5rem;
 }
 @media only screen and (max-width: 990px) {
     .imgLogo{

@@ -1,6 +1,12 @@
 .grad{
     background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
 }
+.navbar.scrolled{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
+}
+.separation{
+    height: 5rem;
+}
 .pfp{
     font-size: 2.3rem;
 }
@@ -28,8 +34,8 @@
     font-size: 0.8rem;
 }
 .imgIndex{
-    width: 10rem;
-    height: 10rem;
+    width: 37%;
+    height: 37%;
 }
 .footer{
     height: 16rem;
@@ -49,7 +55,7 @@
     }
     .imgIndex{
         width: 100%;
-        height: 100%;
+        height: 00%;
     }
     .imgLogo{
         width: 17rem;

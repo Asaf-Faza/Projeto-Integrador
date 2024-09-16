@@ -10,19 +10,27 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary grad">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <div class="mx-2">
-                    <a class="fs-4 text-decoration-none text-dark ms-5" href="./src/pages/Cadastro.html">Cadastrar</a>
-                </div>
-                <div class="d-flex align-items-center">
-                    <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Login.html">Fazer Login</a>
-                    <button class="border-0 bg-transparent pfp me-3"><span class="icon-user-circle-o"></span></button>
+                <div class="d-flex justify-content-between w-100">
+                    <div class="d-flex align-content-center">
+                        <a href="./src/pages/Cadastro.html" class="text-decoration-none text-black fs-3 mx-lg-5 d-flex align-items-center">
+                            Cadastrar
+                        </a>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class=" d-flex align-items-center">
+                            <a class="fs-4 text-decoration-none text-dark" href="./src/pages/Login.html">Fazer Login</a>
+                            <a class="btn border-0 bg-transparent" role="button" href="./Pessoa.html"><span class="icon-user-circle-o pfp"></span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
+        <div class="separation">
+        </div>
         <div class="container-fluid">
             <div class="row row-cols-lg-2 mt-lg-5">
                 <div class="p-0 d-flex flex-column">
@@ -115,7 +123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-0">
+                <div class="p-0 col-lg d-flex flex-column justify-content-lg-end">
                     <div class="col-lg container grad rounded-top-5 py-5 text-center mainCol d-flex flex-column align-items-center mt-3">
                         <div class="row d-lg-none">
                             <div class="row">
@@ -254,5 +262,6 @@
     </main>
     <script src="./src/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

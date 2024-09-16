@@ -1,27 +1,56 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/pedido.css">
+    <link rel="stylesheet" href="./css/filtroPdd.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
-    <title>relatorio de compras</title>
+    <title>Filtro</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg grad fixed-top">
-            <div class="container-fluid d-flex justify-content-between <span class="iconSize icon-filter text-white m-1></span></a>">
-                <a href="./dashboard.html" class="navbar-brand"><span class="iconSize icon-angle-double-left text-white m-3"></span></a>
-                <h1 class="me-4">Pedidos de compras</h1>
-                <div class=""></div>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid d-flex ">
+                <a href="" class="navbar-brand"><span class="iconSize icon-filter text-white m-1"></span></a>
+                <h1 class="me-4 text-white m-1 ">Filtros</h1>
+                <div>
+                    <a href="./estCtrl.html" class="text-decoration-none"><span class="iconSize icon-x text-white m-1 align-content-md-end"></span></a>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="separation">
-        </div>
-        <div class="row m-0">
-            <div class="justify-content-center d-flex p-0">
-                <button class="rounded-3 d-flex flex-column justify-content-evenly align-items-center btmFiltro p-1"><h5>Filtros</h5></button>
+        <form class="container-fluid background p-5">
+            <div class="row d-flex justify-content-center py-5">
+                
             </div>
+            <div class="row justify-content-center">
+                <label for="validationServer04" class="form-label w-75 text-white">Localização no estoque</label>
+                <div class="w-75">
+                    <input type="text" class="form-control my-3" id="InputSobrenome" placeholder="">
+                </div>
+                <label for="validationServer04" class="form-label w-75 text-white">Descrição</label>
+                <div class="w-75">
+                    <input type="text" class="form-control my-3" id="InputNome" placeholder="">
+                </div>
+                <label for="validationServer04" class="form-label w-75 text-white">Grupo do produto</label>
+                <div class="w-75">
+                    <input type="email" class="form-control my-3" id="InputEmail" placeholder="">
+                </div>
+                <label for="validationServer04" class="form-label w-75 text-white">Marca</label>
+                <div class="w-75">
+                    <input type="password" class="form-control my-3" id="InputSenha"  placeholder="">
+                </div>
+                <label for="validationServer04" class="form-label w-75 text-white">Mês/Ano</label>
+                <div class="w-75">
+                    <input type="password" class="form-control my-3" id="InputSenha"  placeholder="">
+                </div>
+                <div class="text-center">
+                    <button  class="btn btn-write bg-white mt-5 w-75"><a href="./estCtrl.html" class="text-decoration-none text-black">Buscar</a></button>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

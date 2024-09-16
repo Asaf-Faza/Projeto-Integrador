@@ -6,67 +6,265 @@
     <link rel="stylesheet" href="./css/styleRelCom.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
+    <link rel="stylesheet" href="../../assets/CSS/datatables.min.css">
     <title>relatorio de compras</title>
 </head>
-<body>
+    
+<body class=" d-flex flex-column justify-content-between">
     <header>
-        <nav class="navbar navbar-expand-lg grad fixed-top">
-            <div class="container-fluid d-flex justify-content-between">
-                <a href="./dashboard.html" class="navbar-brand"><span class="iconSize icon-angle-double-left text-white m-3"></span></a>
-                <h1 class="me-4">Relatório de compras</h1>
-                <div class=""></div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid px-lg-5">
+                <div class="d-flex justify-content-between w-100">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <img src="../../assets/img/imgLogo.png" alt="" class="w-50 h-auto ms-5">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body  d-lg-flex align-items-lg-center">
+                            <a href="./dashboard.html" class="my-3 my-lg-0 ms-3 fs-3 text-decoration-none text-black"><img src="../../assets/img/home icon.png" alt="" class="homeIcon"></a>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
+                                    Cadastro
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item fs-4" href="./CadCliFor.html">Cadastro de clientes e fornecedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./ProCad.html">Cadastro de produtos</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadVen.html">Cadastro de vendedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCad.html">Relatórios</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
+                                    Suprimentos
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item fs-4" href="./estCtr.html">Controle de estoque</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadPdd.html">Pedidos de compra</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCom.html">Relatórios</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class=" d-flex align-items-center">
+                            <a class="fs-4 text-decoration-none text-dark" href="./Login.html">Usuário123</a>
+                            <a class="btn border-0 bg-transparent" role="button" href="./Pessoa.html"><span class="icon-user-circle-o pfp"></span></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="separation">
-        </div>
-        <div class="row m-0">
-            <div class="justify-content-center d-flex p-0">
-                <button class="rounded-3 d-flex flex-column justify-content-evenly align-items-center btmFiltro p-1"><h5>Filtros</h5></button>
-            </div>
-        </div>
-        <div class="row row-cols-lg-2 my-3">
-            <div class="col-lg">
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  11/03/2024 </h3>
-                    <h3>Caixa de canetas 11:33 </h3>
-                </div>
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  12/03/2024</h3>
-                    <h3>Produtos de limpeza  10:33</h3>
-                </div>
-            </div>
-            <div class="col-lg">
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  11/03/2024 </h3>
-                    <h3>Caixa de canetas 11:33 </h3>
-                </div>
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  12/03/2024</h3>
-                    <h3>Produtos de limpeza  10:33</h3>
-                </div>
-            </div>
-            <div class="col-lg">
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  11/03/2024 </h3>
-                    <h3>Caixa de canetas 11:33 </h3>
-                </div>
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  12/03/2024</h3>
-                    <h3>Produtos de limpeza  10:33</h3>
-                </div>
-            </div>
-            <div class="col-lg">
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  11/03/2024 </h3>
-                    <h3>Caixa de canetas 11:33 </h3>
-                </div>
-                <div class="quadrado rounded-3 my-1 d-flex flex-column justify-content-evenly align-items-center">
-                    <h3>Compra aprovada  12/03/2024</h3>
-                    <h3>Produtos de limpeza  10:33</h3>
+        <div class="separation"></div>
+        <div class="container-fluid">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="col-lg mt-3">
+                    <div class="accordion-iten">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fs-3 fw-bold my-3 grad rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Relatório de Compras
+                            </button>
+                        </h2>
+                    <form action="" class="">
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                            <div class="table-responsive">
+                                <table id="fluxo" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Produtos</th>
+                                            <th>Fluxo de Venda</th>
+                                            <th>Unidades em Estoque</th>
+                                            <th>Preço</th>
+                                            <th>Saldo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>2uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>produtos de limpeza</td>
+                                            <td>alto</td>
+                                            <td>40uni</td>
+                                            <td>50,00R$</td>
+                                            <td>+350,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>caixa de caneta</td>
+                                            <td>baixo</td>
+                                            <td>20uni</td>
+                                            <td>20,00R$</td>
+                                            <td>+100,00R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td>computador</td>
+                                            <td>alto</td>
+                                            <td>20uni</td>
+                                            <td>800,00R$</td>
+                                            <td>+2,000,00R$</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer container-fluid grayGrad">
+            <div class="row row-cols-lg-2 py-2">
+                <div class="col-lg d-flex flex-column justify-content-around align-items-center">
+                    <img src="../../assets/img/imgLogo.png" alt="" class="w-25 m-3">
+                    <p class=" fw-semibold">&copy;2024, todos os direitos reservados</p>
+                </div>
+                <div class="col-lg d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-at-sign"></span><a href="" class="text-decoration-none text-black fw-semibold">senacemail@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-phone"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 1234-5678</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-whatsapp"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 98765-4321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../src/js/datatables.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
+</html>

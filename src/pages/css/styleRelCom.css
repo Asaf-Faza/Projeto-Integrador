@@ -1,3 +1,6 @@
+body{
+    height: 100vh;
+}
 .grad{
     background: -webkit-linear-gradient(90deg, rgb(96, 147, 224) 0%, rgb(118, 132, 194) 100%);
 }
@@ -7,6 +10,16 @@
     height: 8rem;
     display: flex ;
     justify-content: center;
+}
+.pfp{
+    font-size: 2.3rem;
+}
+.homeIcon{
+    width: 2rem;
+    height: 2rem;
+}
+.grayGrad{
+    background: -webkit-linear-gradient(90deg, rgb(194, 194, 194) 0%, rgb(255, 255, 255) 100%);
 }
 .btmFiltro{
     background-color: #33302da6;
@@ -24,4 +37,7 @@
 }
 .separation{
     height: 6rem;
+}
+.navbar.scrolled{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
 }

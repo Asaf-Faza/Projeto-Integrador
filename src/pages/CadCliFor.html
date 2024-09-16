@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="./css/styleCadCliFor.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/CSS/icomoon.css">
+    <link rel="stylesheet" href="../../assets/CSS/datatables.min.css">
     <title>Cadastro de Clientes e Fornecedores</title>
 </head>
-<body>
+<body class="d-flex flex-column justify-content-between ">
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary grad">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
                 <div class="d-flex justify-content-between w-100">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,26 +22,27 @@
                             <img src="../../assets/img/imgLogo.png" alt="" class="w-50 h-auto ms-5">
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        <div class="offcanvas-body">
-                            <div class="dropdown mt-3">
-                                <a class="dropdown-toggle text-decoration-none text-black ms-3" type="button" data-bs-toggle="dropdown">
+                        <div class="offcanvas-body  d-lg-flex align-items-lg-center">
+                            <a href="./dashboard.html" class="my-3 my-lg-0 ms-3 fs-3 text-decoration-none text-black"><img src="../../assets/img/home icon.png" alt="" class="homeIcon"></a>
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
                                     Cadastro
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Cadastro de clientes e fornecedores</a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastro de produtos</a></li>
-                                    <li><a class="dropdown-item" href="#">Cadastro de vendedores</a></li>
-                                    <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadCliFor.html">Cadastro de clientes e fornecedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./ProCad.html">Cadastro de produtos</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadVen.html">Cadastro de vendedores</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCad.html">Relatórios</a></li>
                                 </ul>
                             </div>
-                            <div class="dropdown mt-3">
-                                <a class="dropdown-toggle text-decoration-none text-black ms-3" type="button" data-bs-toggle="dropdown">
+                            <div class="dropdown my-3 my-lg-0">
+                                <a class="dropdown-toggle text-decoration-none text-black ms-3 fs-4" type="button" data-bs-toggle="dropdown">
                                     Suprimentos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Controle de estoque</a></li>
-                                    <li><a class="dropdown-item" href="#">Pedidos de compra</a></li>
-                                    <li><a class="dropdown-item" href="#">Relatórios</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./estCtr.html">Controle de estoque</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./CadPdd.html">Pedidos de compra</a></li>
+                                    <li><a class="dropdown-item fs-4" href="./RelCom.html">Relatórios</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -56,99 +58,146 @@
         </nav>
     </header>
     <main>
-        <div class="container-fluid">
+        <div class="separation"></div>
+        <div class="container-fluid px-lg-5">
             <div class="row row-cols-lg-2 p-0 m-0">
+                <div class="col-lg">
+                    <div class="d-flex justify-content-around mt-5 flex-lg-column align-items-center">
+                        <button class="btn grad col-5 fw-bolder m-2 fs-4" type="button" data-bs-toggle="modal" data-bs-target="#modalFornecedor">
+                            Cadastrar novo fornecedor
+                        </button>
+                        <button class="btn col-5 fw-bolder grad m-2 fs-4" type="button" data-bs-toggle="modal"  data-bs-target="#modalCliente">
+                            Cadastrar novo cliente
+                        </button>
+                    </div>
+                </div>
                 <div class="col-lg mt-3">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fs-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <button class="accordion-button collapsed fs-3 fw-bold my-3 grad rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                                 Clientes cadastrados
                                 </button>
                             </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseOne" class="accordion-collapse collapse show">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table id="clientes" class="display table table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
-                                                <th>Região</th>
-                                                <th>CPF</th>
-                                                <th>Telefone</th>
                                                 <th>E-mail</th>
+                                                <th>Telefone</th>
+                                                <th>CPF</th>
+                                                <th>Região</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
-                                            </tr>
-                                            <tr class="table-secondary">
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
                                             </tr>
                                             <tr>
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
-                                            </tr>
-                                            <tr class="table-secondary">
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
                                             </tr>
                                             <tr>
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
-                                            </tr>
-                                            <tr class="table-secondary">
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
                                             </tr>
                                             <tr>
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
                                             </tr>
-                                            <tr class="table-secondary">
-                                                <td>Sandro de Paula</td>
-                                                <td>PR Litoral</td>
-                                                <td>177.514.519-04</td>
-                                                <td>(41) 9999-9999</td>
-                                                <td>sanpaula@gmail.com</td>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
                                             </tr>
-                                        </tbody>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>Astolobin@gmail.com</td>
+                                                <td>(41) 1111-1111</td>
+                                                <td>970.486.180-00</td>
+                                                <td>Matinhos, PR</td>
+                                            </tr>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>E-mail</th>
+                                                <th>Telefone</th>
+                                                <th>CPF</th>
+                                                <th>Região</th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fs-3 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Fornecedores 
+                                <button class="accordion-button collapsed fs-3 fw-bold my-3 grad rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Fornecedores
                                 </button>
                             </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse">
                                 <div class="table-responsive">
-                                    <table class="table">
+                                    <table id="fornecedor" class="display table table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Nome</th>
@@ -162,13 +211,13 @@
                                         <tbody>
                                             <tr>
                                                 <td>Astolfo Lobo</td>
-                                                <td>PR RMC</td>
+                                                <td>RMC, PR</td>
                                                 <td>Batatas</td>
                                                 <td>851.815.530-44</td>
                                                 <td>(41) 2980-3670</td>
                                                 <td>astolobin@gmail.com</td>
                                             </tr>
-                                            <tr class="table-secondary">
+                                            <tr>
                                                 <td>Astolfo Lobo</td>
                                                 <td>PR RMC</td>
                                                 <td>Batatas</td>
@@ -184,7 +233,103 @@
                                                 <td>(41) 2980-3670</td>
                                                 <td>astolobin@gmail.com</td>
                                             </tr>
-                                            <tr class="table-secondary">
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Astolfo Lobo</td>
+                                                <td>PR RMC</td>
+                                                <td>Batatas</td>
+                                                <td>851.815.530-44</td>
+                                                <td>(41) 2980-3670</td>
+                                                <td>astolobin@gmail.com</td>
+                                            </tr>
+                                            <tr>
                                                 <td>Astolfo Lobo</td>
                                                 <td>PR RMC</td>
                                                 <td>Batatas</td>
@@ -199,65 +344,181 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg">
-                    <div class="d-flex justify-content-around mt-5">
-                        <button class="btn grad w-25 fw-bolder"  type="button" data-bs-toggle="offcanvas" data-bs-target="#Fornecedor" aria-controls="offcanvasScrolling">
-                            Cadastrar novo fornecedor
-                        </button>
-                        <button class="btn w-25 fw-bolder grad" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCliente" aria-expanded="false" aria-controls="collapseCliente">
-                            Cadastrar novo cliente
-                        </button>
-                        
+            </div>
+            <div class="modal modal-lg fade" id="modalCliente" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar cliente</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" class="d-flex flex-column justify-content-around ms-4">
+                                <div class="fw-bold fs-3 my-3">Cadastrar Cliente</div>
+                                <div class="row my-3">
+                                    <label for="nome" id="nomeLabel" aria-label="nome" class="form-label fw-semibold">Nome:</label>
+                                    <input type="text" id="nome" aria-labelledby="nomeLabel" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="sobrenome" id="sobrenomeLabel" aria-label="sobrenome" class="form-label fw-semibold">Sobrenome:</label>
+                                    <input type="text" id="sobrenome" aria-labelledby="sobrenomeLabel" class="form-control w-75 shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="email" id="emailLabel" aria-label="email" class="form-label fw-semibold">Endereço de E-mail:</label>
+                                    <input type="text" id="email" aria-labelledby="emailLabel" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="phone" id="phoneLabel" aria-label="phone" class="form-label fw-semibold">Número de Telefone:</label>
+                                    <input type="text" id="phone" aria-labelledby="phoneLabel" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="CPF" id="cpfLabel" aria-label="CPF" class="form-label fw-semibold">CPF:</label>
+                                    <input type="text" id="CPF" aria-labelledby="cpfLabel" class="w-75 form-control shadow">
+                                </div>
+                                <label for="Endereco" aria-label="Endereco" id="enderecoLabel" class="fw-bolder fs-5">Endereço</label>
+                                <div class="row" id="Endereco" aria-labelledby="enderecoLabel">
+                                <div class="row w-75">
+                                    <select class="form-select my-3 shadow" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                        <option selected disabled value="">Estado</option>
+                                        <option>Paraná</option>
+                                        <option>Rio Grande do Sul</option>
+                                        <option>Santa Catarina</option>
+                                    </select>
+                                    <div id="validationServer04Feedback" class="invalid-feedback">
+                                        Please select a valid state.
+                                    </div>
+                                </div>
+                                <div class="row w-75">
+                                    <select class="form-select my-3 shadow" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                        <option selected disabled value="">Cidade</option>
+                                        <option>Matinhos</option>
+                                        <option>Guaratuba</option>
+                                        <option>Paranaguá</option>
+                                    </select>
+                                    <div id="validationServer04Feedback" class="invalid-feedback">
+                                        Please select a valid state.
+                                    </div>
+                                </div>
+                                <div class="row w-75">
+                                    <label for="rua" id="ruaLabel" aria-label="rua" class="form-label fw-semibold">Rua:</label>
+                                    <input type="text" aria-labelledby="ruaLabel" class="form-control my-3 shadow " id="rua">
+                                </div>
+                                <div class="row w-75">
+                                    <label for="complemento" id="complementoLabel" aria-label="complemento" class="form-label fw-semibold">Número e/ou complemento:</label>
+                                    <input type="text" aria-labelledby="complementoLabel" class="form-control my-3 shadow " id="complemento">
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar cliente</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div style="min-height: 120px;">
-                <div class="collapse collapse-horizontal m-5 show" id="collapseCliente">
-                    <form action="" class="d-flex flex-column justify-content-around">
-                        <div class="fw-bold fs-3 my-3">Cadastrar Cliente</div>
-                        <div class="row my-3">
-                            <label for="nome" id="nomeLabel" class="form-label fw-semibold">Nome:</label>
-                            <input type="text" id="nome" aria-labelledby="nomeLabel" class="w-75">
+            <div class="modal modal-lg fade" id="modalFornecedor" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar fornecedor</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="row my-3">
-                            <label for="sobrenome" id="sobrenomeLabel" class="form-label fw-semibold">Sobrenome:</label>
-                            <input type="text" id="sobrenome" aria-labelledby="sobrenomeLabel" class="w-75">
+                        <div class="modal-body">
+                            <form action="" class="d-flex flex-column justify-content-around ms-4">
+                                <div class="fw-bold fs-3 my-3">Cadastrar Fornecedor</div>
+                                <div class="row my-3">
+                                    <label for="nome" id="nomeLabel2" aria-label="nome2" class="form-label fw-semibold">Nome:</label>
+                                    <input type="text" id="nome2" aria-labelledby="nomeLabel2" class="w-75 form-control shadow form">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="sobrenome" id="sobrenomeLabel2" aria-label="sobrenome2" class="form-label fw-semibold">Sobrenome:</label>
+                                    <input type="text" id="sobrenome2" aria-labelledby="sobrenomeLabel2" class="form-control w-75 shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="email" id="emailLabel2" aria-label="email2" class="form-label fw-semibold">Endereço de E-mail:</label>
+                                    <input type="text" id="email2" aria-labelledby="emailLabel2" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="phone" id="phoneLabel2" aria-label="phone2" class="form-label fw-semibold">Número de Telefone:</label>
+                                    <input type="number" id="phone2" aria-labelledby="phoneLabel2" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="CPF" id="cpfLabel2" aria-label="CPF2" class="form-label fw-semibold">CPF:</label>
+                                    <input type="number" id="CPF2" aria-labelledby="cpfLabel2" class="w-75 form-control shadow">
+                                </div>
+                                <div class="row my-3">
+                                    <label for="produto" id="produtoLabel" aria-label="produto" class="form-label fw-semibold">Produto Fornecido:</label>
+                                    <input type="number" id="produto" aria-labelledby="produtoLabel" class="w-75 form-control shadow">
+                                </div>
+                                <label for="Endereco2" aria-label="Endereco2" id="enderecoLabel2" class="fw-bolder fs-5">Endereço</label>
+                                <div class="row" id="Endereco2" aria-labelledby="enderecoLabel2">
+                                    <div class="row w-75">
+                                        <select class="form-select my-3 shadow" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                            <option selected disabled value="">Estado</option>
+                                            <option>Paraná</option>
+                                            <option>Rio Grande do Sul</option>
+                                            <option>Santa Catarina</option>
+                                        </select>
+                                        <div id="validationServer04Feedback" class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="row w-75">
+                                        <select class="form-select my-3 shadow" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                                            <option selected disabled value="">Cidade</option>
+                                            <option>Matinhos</option>
+                                            <option>Guaratuba</option>
+                                            <option>Paranaguá</option>
+                                        </select>
+                                        <div id="validationServer04Feedback" class="invalid-feedback">
+                                            Please select a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="row w-75">
+                                        <label for="rua" id="ruaLabel2" aria-label="rua2" class="form-label fw-semibold">Rua:</label>
+                                        <input type="text" aria-labelledby="ruaLabel2" class="form-control my-3 shadow " id="rua">
+                                    </div>
+                                    <div class="row w-75">
+                                        <label for="complemento" id="complementoLabel2" aria-label="complemento2" class="form-label fw-semibold">Número e/ou complemento:</label>
+                                        <input type="text" aria-labelledby="complementoLabel2" class="form-control my-3 shadow " id="complemento">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="row my-3"></div>
-                    </form>
-                </div>
-            </div>
-            <div class="offcanvas offcanvas-end grad" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="Cliente" aria-labelledby="offcanvasClienteLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title fw-bold fs-3 ms-3" id="offcanvasClienteLabel">Cadastrar novo cliente</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <form action="" class="d-flex flex-column justify-content-around">
-                        <div class="row"></div>
-                        <label for="Nome" id="nomeLabel" class="form-label fw-semibold">Nome:</label>
-                        <input type="text" id="Nome" aria-labelledby="nomeLabel" class="w-75">
-
-                        <label for="" id="" class="form-label fw-semibold">Sobrenome:</label>
-                        <input type="text" id="" aria-labelledby="" class="w-75">
-
-                        <label for="" id="" class="form-label fw-semibold">Sobrenome:</label>
-                        <input type="text" id="" aria-labelledby="" class="w-75">
-                    </form>
-                </div>
-            </div>
-            <div class="offcanvas offcanvas-bottom grad" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="Fornecedor" aria-labelledby="offcanvasClienteLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title fw-bold fs-3 ms-3" id="offcanvasClienteLabel">Cadastrar novo fornecedor</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-
+                        <div class="modal-footer d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar cliente</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer container-fluid grayGrad">
+            <div class="row row-cols-lg-2 py-2">
+                <div class="col-lg d-flex flex-column justify-content-around align-items-center">
+                    <img src="../../assets/img/imgLogo.png" alt="" class="w-25 m-3">
+                    <p class=" fw-semibold">&copy;2024, todos os direitos reservados</p>
+                </div>
+                <div class="col-lg d-flex flex-column align-items-center justify-content-center">
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-at-sign"></span><a href="" class="text-decoration-none text-black fw-semibold">senacemail@gmail.com</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-phone"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 1234-5678</a>
+                    </div>
+                    <div class="d-flex align-items-center ">
+                        <span class="icon-whatsapp"></span><a href="" class="text-decoration-none text-black fw-semibold">(41) 98765-4321</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../src/js/datatables.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

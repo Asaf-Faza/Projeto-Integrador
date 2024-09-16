@@ -17,59 +17,29 @@
         </nav>
     </header>
     <main>
-        <form class="container-fluid background p-5">
-            <div class="row d-flex justify-content-center py-5">
-                <img src="../../assets/img/LogoBW.png" alt="" class="w-auto h-auto">
-            </div>
-            <div class="row justify-content-center">
-                <div class="w-75">
-                    <input type="text" class="form-control my-3" id="InputSobrenome" placeholder="Nome ">
+        <div class="container-fluid background">
+            <form class="p-5 d-flex flex-column justify-content-around">
+                <div class="row d-flex justify-content-center py-5">
+                    <img src="../../assets/img/LogoBW.png" alt="" class="w-auto h-auto">
                 </div>
-                <div class="w-75">
-                    <input type="text" class="form-control my-3" id="InputNome" placeholder="Sobrenome">
-                </div>
-                <div class="w-75">
-                    <input type="email" class="form-control my-3" id="InputEmail" placeholder="E-mail">
-                </div>
-                <div class="w-75">
-                    <input type="password" class="form-control my-3" id="InputSenha"  placeholder="Senha">
-                </div>
-                <label for="validationServer04" class="form-label w-75">Endereço :</label>
-                <div class="w-75">
-                    <select class="form-select my-3" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                        <option selected disabled value="">Estado</option>
-                        <option>Paraná</option>
-                        <option>Rio Grande do Sul</option>
-                        <option>Santa Catarina</option>
-                    </select>
-                    <div id="validationServer04Feedback" class="invalid-feedback">
-                        Please select a valid state.
+                <div class=" justify-content-center flex-column align-items-center input-group">
+                    <div class="w-75">
+                        <input type="text" class="form-control my-3" id="InputSobrenome" placeholder="Nome ">
+                    </div>
+                    <div class="w-75">
+                        <input type="email" class="form-control my-3" id="InputEmail" placeholder="E-mail">
+                    </div>
+                    <div class="w-75">
+                        <input type="password" class="form-control my-3" id="InputSenha"  placeholder="Senha">
                     </div>
                 </div>
-                <div class="w-75">
-                    <select class="form-select my-3" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                        <option selected disabled value="">Cidade</option>
-                        <option>Matinhos</option>
-                        <option>Guaratuba</option>
-                        <option>Paranaguá</option>
-                    </select>
-                    <div id="validationServer04Feedback" class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
-                <div class="w-75">
-                    <input type="nome" class="form-control my-3" id="InputEmail" placeholder="Rua">
-                </div>
-                <div class="w-75">
-                    <input type="nome" class="form-control my-3" id="InputEmail" placeholder="Número ou complemento">
-                </div>
-            </div>
-            <div class="text-center">
-                <button  class="btn btn-write bg-white mt-5"><a href="./dashboard.html" class="text-decoration-none text-black">Cadastrar</a></button>
-            </div>
-        </form>
+                <div class="text-center">
+                <a href="./dashboard.html" class="text-decoration-none text-black btn btn-write bg-white mt-5">Cadastrar</a>
+            </form>
+        </div>
     </main>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

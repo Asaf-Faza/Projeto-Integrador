@@ -8,6 +8,13 @@
     display: flex ;
     justify-content: center;
 }
+.homeIcon{
+    width: 2rem;
+    height: 2rem;
+}
+.grayGrad{
+    background: -webkit-linear-gradient(90deg, rgb(194, 194, 194) 0%, rgb(255, 255, 255) 100%);
+}
 .btmFiltro{
     background-color: #6e6961b0;
     width: 60rem;
@@ -23,7 +30,7 @@
     font-size: 4rem;
 }
 .separation{
-    height: 6rem;
+    height: 7rem;
 }
 .quadrinho{
     display: flex;

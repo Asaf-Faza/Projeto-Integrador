@@ -12,3 +12,6 @@
     height: 2rem;
     width: 11rem;
 }
+.navbar.scrolled{
+    background: -webkit-linear-gradient(90deg, rgb(232, 186, 140) 0%, rgb(250, 163, 34) 100%);
+}
